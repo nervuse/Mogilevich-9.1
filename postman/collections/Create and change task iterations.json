@@ -192,7 +192,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{baseUrl}}/tasks?page=0&size=100",
+					"raw": "{{baseUrl}}/tasks?page=0&size=1500",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -206,7 +206,7 @@
 						},
 						{
 							"key": "size",
-							"value": "100"
+							"value": "1500"
 						}
 					]
 				}
@@ -430,7 +430,7 @@
 							"pm.environment.unset('lastID')",
 							"pm.environment.unset('token')",
 							"pm.environment.unset('currentAmountOfTasks')",
-							"pm.environment.unset('targetNumberOfTasks')",
+							"//pm.environment.unset('targetNumberOfTasks')",
 							"pm.environment.unset('ids')",
 							""
 						],
