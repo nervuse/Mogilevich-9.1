@@ -32,5 +32,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
+          postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
+          postman collection run "postman/collections/Create and change task iterations.json" -e "26126335-2b52258a-8f33-4ef1-91df-5a54ee814554"
