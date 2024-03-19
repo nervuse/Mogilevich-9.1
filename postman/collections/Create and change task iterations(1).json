@@ -132,6 +132,9 @@
 							"let currentAmountOfTasks = pm.response.json().length;",
 							"console.log(pm.response.json().length)",
 							"",
+							"pm.environment.set('targetNumberOfTasks', currentAmountOfTasks + 5);",
+							"",
+							"",
 							"pm.test(\"Schema is valid\", function () {",
 							"  var schema = {",
 							"    type: \"array\",",
@@ -168,8 +171,10 @@
 					"script": {
 						"id": "fa269628-e5f5-4fdf-8d33-c3a58c0463b2",
 						"exec": [
-							"pm.environment.set('targetNumberOfTasks', '1100')",
-							""
+							"",
+							"// let currentAmountOfTasks = pm.response.json().length;",
+							"",
+							"// pm.environment.set('targetNumberOfTasks', currentAmountOfTasks + 5);"
 						],
 						"type": "text/javascript",
 						"packages": {}
