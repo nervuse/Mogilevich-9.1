@@ -125,9 +125,20 @@
 			"name": "get tasks list",
 			"event": [
 				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0ba3f998-cfd3-4404-b0f7-97830950cbe0",
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
 					"listen": "test",
 					"script": {
-						"id": "05a7c081-d016-40e3-8fcf-67c76adbf6e1",
+						"id": "0ac3e97f-93d4-4309-91ba-9393d412335f",
 						"exec": [
 							"let currentAmountOfTasks = pm.response.json().length;",
 							"console.log(pm.response.json().length)",
@@ -161,20 +172,6 @@
 							"} else {",
 							"    postman.setNextRequest('change task text')",
 							"};"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				},
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "fa269628-e5f5-4fdf-8d33-c3a58c0463b2",
-						"exec": [
-							"",
-							"// let currentAmountOfTasks = pm.response.json().length;",
-							"",
-							"// pm.environment.set('targetNumberOfTasks', currentAmountOfTasks + 5);"
 						],
 						"type": "text/javascript",
 						"packages": {}
